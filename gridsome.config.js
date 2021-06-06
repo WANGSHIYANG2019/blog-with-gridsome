@@ -17,12 +17,22 @@ module.exports = {
     options: {
       apiURL: 'http://localhost:1337',
       queryLimit: 1000, //Defaults to 100
-      contentTypes: ['post'],
-      //singleTypes: ['impressum'],
-      // loginData: {
-      //   identifier: '',
-      //   password: ''
-      // }
+      contentTypes: ['post', 'tag'],
+      singleTypes: ['general'],
     }
-  }]
+  }],
+  templates: {//根据内容类型创造模板
+    StrapiPost: [
+      {
+        path: '/post/:id',
+        component: './src/templates/Post.vue'
+      }
+    ],
+    StrapiTag: [
+      {
+        path: '/tag/:id',
+        component: './src/templates/Tag.vue'
+      }
+    ]
+  }
 }
