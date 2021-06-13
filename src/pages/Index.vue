@@ -88,7 +88,7 @@ import {Pager} from 'gridsome'
 
 export default {
     metaInfo: {
-        title: 'Hello, world!'
+        title: this.general.title
     },
     name: 'HomePage',
     components: {
