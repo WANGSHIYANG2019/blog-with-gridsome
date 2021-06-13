@@ -4,7 +4,7 @@
         <header class="masthead">
             <div class="overlay"
                  :style="{
-                    backgroundImage: `url(http://localhost:1337${general.cover[0].url})`
+                    backgroundImage: `url(http://106.75.63.25:1337${general.cover[0].url})`
                 }"></div>
             <div class="container">
                 <div class="row">
