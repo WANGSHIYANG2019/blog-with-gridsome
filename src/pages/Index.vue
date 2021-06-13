@@ -99,7 +99,7 @@ export default {
             return this.$page.general.edges[0].node
         },
         allTitle() {
-            return this.general? this.general.title : "默认的个人博客";
+            return this.$page.general.edges[0].node;
         }
     }
 }
