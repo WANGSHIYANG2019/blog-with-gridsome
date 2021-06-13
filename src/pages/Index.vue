@@ -88,7 +88,7 @@ import {Pager} from 'gridsome'
 
 export default {
     metaInfo: {
-        title: this.allTitle
+        title: '欢迎访问我的个人博客'
     },
     name: 'HomePage',
     components: {
@@ -97,10 +97,10 @@ export default {
     computed: {
         general() {
             return this.$page.general.edges[0].node
-        },
-        allTitle() {
-            return this.$page.general.edges[0].node;
         }
+    },
+    mounted() {
+
     }
 }
 </script>
