@@ -88,7 +88,7 @@ import {Pager} from 'gridsome'
 
 export default {
     metaInfo: {
-        title: this.general.title
+        title: this.allTitle
     },
     name: 'HomePage',
     components: {
@@ -97,6 +97,9 @@ export default {
     computed: {
         general() {
             return this.$page.general.edges[0].node
+        },
+        allTitle() {
+            return this.general? this.general.title : "默认的个人博客";
         }
     }
 }
