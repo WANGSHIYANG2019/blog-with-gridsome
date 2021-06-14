@@ -23,7 +23,7 @@
                           <g-link class="nav-link" to="/contact">Contact</g-link>
                       </li>
                       <li class="nav-item">
-                          <g-link class="nav-link" to="/newIndex">新版博客入口处</g-link>
+                          <g-link class="nav-link" to="/newindex">新版博客入口处</g-link>
                       </li>
                   </ul>
               </div>
