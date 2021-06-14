@@ -87,8 +87,10 @@ query ($page: Int) {
 import {Pager} from 'gridsome'
 
 export default {
-    metaInfo: {
-        title: '欢迎访问我的个人博客'
+    metaInfo() {
+        return {
+            title: '欢迎访问我的个人博客'
+        }
     },
     name: 'HomePage',
     components: {
@@ -100,7 +102,8 @@ export default {
         }
     },
     mounted() {
-
+        console.log("就这样风雨兼程");
+        this.$metaInfo.title = this.general.title;
     }
 }
 </script>
