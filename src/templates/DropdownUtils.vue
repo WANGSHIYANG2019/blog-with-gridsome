@@ -42,11 +42,11 @@ export default {
 <style scoped>
 @font-face {
     font-family: "glyphIcons";
-    src: url("../assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"),
-    url("../assets/fonts/glyphicons-halflings-regular.woff") format("woff"),
-    url("../assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"),
-    url("../assets/fonts/glyphicons-halflings-regular.eot") format("embedded-opentype"),
-    url("../assets/fonts/glyphicons-halflings-regular.svg") format("svg");
+    src: url("../assets/fonts/glyphIcons/glyphicons-halflings-regular.woff2") format("woff2"),
+    url("../assets/fonts/glyphIcons/glyphicons-halflings-regular.woff") format("woff"),
+    url("../assets/fonts/glyphIcons/glyphicons-halflings-regular.ttf") format("truetype"),
+    url("../assets/fonts/glyphIcons/glyphicons-halflings-regular.eot") format("embedded-opentype"),
+    url("../assets/fonts/glyphIcons/glyphicons-halflings-regular.svg") format("svg");
 }
 
     * {

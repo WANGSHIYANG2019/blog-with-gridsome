@@ -1,7 +1,7 @@
 <template>
     <ul class="middleBar">
         <li v-for="item in menus">
-            <DropdownUtils :name="item.title">
+            <DropdownUtils :name="item.title" :submenus="item.submenus">
             </DropdownUtils>
         </li>
     </ul>
@@ -36,6 +36,7 @@ export default {
         border-radius: 0.5rem;
         border: 0.05rem solid lightgrey;
         box-shadow: 0 0 2rem grey;
+        margin: 0;
     }
 
     .middleBar > li {

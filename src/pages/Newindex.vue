@@ -7,7 +7,9 @@
             <div class="middleBar">
                 <WSYMiddleBar></WSYMiddleBar>
             </div>
-            <section class="mainContent"></section>
+            <section class="mainContent">
+                <WSYContent></WSYContent>
+            </section>
             <section class="footer"></section>
         </div>
         <div class="layer2">
@@ -31,9 +33,10 @@ query {
 <script>
 import WSYHeader from "../templates/WSYHeader";
 import WSYMiddleBar from "../templates/WSYMiddleBar";
+import WSYContent from "../templates/WSYContent";
 export default {
     name: "newIndexPage",
-    components: {WSYMiddleBar, WSYHeader}
+    components: {WSYContent, WSYMiddleBar, WSYHeader}
 }
 </script>
 
@@ -57,6 +60,7 @@ export default {
 
     #app > .layer1 > .header {
         height: 20rem;
+        z-index: 0;
     }
 
     #app > .layer1 > .middleBar {
@@ -64,5 +68,13 @@ export default {
         align-items: center;
         justify-content: center;
         overflow: visible;
+        z-index: 2;
+    }
+
+    #app > .layer1 > .mainContent {
+        justify-content: center;
+        padding: 5rem 0;
+        box-sizing: border-box;
+        z-index: 1;
     }
 </style>
