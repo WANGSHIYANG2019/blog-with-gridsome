@@ -46,8 +46,8 @@ export default {
         display: flex;
         transition: all .3s;
     }
-y
-.leftButtons > .iconAndTitle:hover {
+
+    .leftButtons > .iconAndTitle:hover {
         background: #ebf4fe;
     }
 
