@@ -44,6 +44,11 @@ export default {
 
     .leftButtons > .iconAndTitle {
         display: flex;
+        transition: all .3s;
+    }
+y
+.leftButtons > .iconAndTitle:hover {
+        background: #ebf4fe;
     }
 
     .leftButtons > .iconAndTitle > p {
