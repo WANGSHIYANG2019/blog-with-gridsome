@@ -14,12 +14,23 @@ export default {
     name: "WSYHeader",
     computed: {
         titleAndSubtitle() {
+            let defaultVariable = {title: '总标题', subtitle: '副标题之二'};
+            if (this.$page) {
+                if (this.$page.general) {
+                    if (this.$page.general.edges) {
+                        return this.$page.general.edges[0].node;
+                    } else return defaultVariable;
+                } else return defaultVariable;
+            } else return defaultVariable;
             //if (this.$page.general.edges) {
             //    return this.$page.general.edges[0].node;
             //} else {
-                return {title: '总标题', subtitle: '副标题之二'}
+            return {title: '总标题', subtitle: '副标题之二'}
             //}
         }
+    },
+    mounted() {
+
     }
 }
 </script>
