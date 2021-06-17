@@ -1,6 +1,10 @@
 <template>
 <ul class="leftButtons">
-    <li class="iconAndTitle" v-for="menu in menuLists"><p class="icon">{{ menu.content }}</p><p>{{menu.title}}</p></li>
+    <slot name="random">
+        <router-link class="iconAndTitle" v-for="menu in menuLists" :to="menu.link">
+            <p class="icon">{{ menu.content }}</p><p>{{menu.title}}</p>
+        </router-link>
+    </slot>
 </ul>
 </template>
 
@@ -9,12 +13,18 @@ export default {
     name: "leftButtons",
     data() {
         return {
-            menuLists: [{title: '最新动态', content: '\ue800'},
-                {title: '社交圈', content: '\ue801'},
-                {title: '博客列表', content: '\ue802'},
-                {title: '开源项目', content: '\ue802'},
-                {title: "使用帮助", content: '\ue804'},
-                {title: "README.md", content: '\uf1ea'}]
+            menuLists: [{title: '最新动态', content: '\ue800', link: '/new-index/friends/'},
+                {title: '社交圈', content: '\ue801', link: '/new-index/updates/'},
+                {title: '博客列表', content: '\ue802', link: '/'},
+                {title: '开源项目', content: '\ue802', link: '/'},
+                {title: "使用帮助", content: '\ue804', link: '/'},
+                {title: "README.md", content: '\uf1ea', link: '/'}]
+        }
+    },
+    methods: {
+        //单击左边菜单任意一个项目
+        clickSingleMenu() {
+            this.$emit("leftClick", "CCTV");
         }
     }
 }

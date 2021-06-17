@@ -8,12 +8,17 @@
                 <WSYMiddleBar></WSYMiddleBar>
             </div>
             <section class="mainContent">
-                <WSYContent></WSYContent>
+                <WSYContent>
+                    <template v-slot:random>
+                        <slot name="random"></slot>
+                    </template>
+                    <slot></slot>
+                </WSYContent>
             </section>
-            <section class="footer"></section>
+            <section class="footer">
+            </section>
         </div>
         <div class="layer2">
-
         </div>
     </div>
 </template>

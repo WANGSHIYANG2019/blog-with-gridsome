@@ -1,12 +1,14 @@
 <template>
     <div class="WSYContent">
         <div class="component left">
-            <left-buttons></left-buttons>
+            <left-buttons @leftClick="leftClick">
+                <template v-slot:random>
+                    <slot name="random"></slot>
+                </template>
+            </left-buttons>
         </div>
         <div class="component right">
-            <router-view>
-
-            </router-view>
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -16,7 +18,12 @@
 import LeftButtons from "./leftButtons";
 export default {
     name: "WSYContent",
-    components: {LeftButtons}
+    components: {LeftButtons},
+    methods: {
+        leftClick(name) {
+            console.log(name);
+        }
+    }
 }
 </script>
 
