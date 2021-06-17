@@ -14,7 +14,11 @@ export default {
     name: "WSYHeader",
     computed: {
         titleAndSubtitle() {
-            return this.$page.general.edges[0].node;
+            if (this.$page.general.edges) {
+                return this.$page.general.edges[0].node;
+            } else {
+                return {title: '总标题', subtitle: '副标题'}
+            }
         }
     }
 }
